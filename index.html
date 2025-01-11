@@ -1,26 +1,50 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FinCompa</title>
+    <meta name="description" content="FinCompa - Financial Comparisons">
+    <meta name="author" content="Jamie Hoffmann">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <style>
         body {
-            background-color: rgb(54, 54, 54);
+            background-color: rgb(15, 15, 15);
         }
         p {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Lato, Helvetica, sans-serif;
             color: white;
             text-align: center;
         }
+        h1 {
+            font-family: Lato, Arial, Helvetica, sans-serif;
+            font-size: min(max(20px, 5vw), 50px);
+            color: white;
+            text-align: center;
+        }
+        .home {
+            margin: 10%;
+            padding: 10%;
+            box-shadow: 0 0 15px rgb(0, 42, 179);
+            border-radius: 20px;
+        }
     </style>
-    <p>
-        Website under construction.
-        <br>
-    </p>
-    <p id="demo"></p>
+    <div class="home">
+        <h1>
+            Website under construction. 
+            <br>
+            &#128679; &#128679;
+        </h1>
+        <p>Time till launch:</p>
+        <p id="demo"></p>
+    </div>
 <script>
 // Idea from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_countdown
 // Set the date we're counting down to
@@ -42,7 +66,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = "Time until launch: " + days + "d " + hours + "h "
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
     
   // If the count down is over, write some text 
